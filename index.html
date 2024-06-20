@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/css/main.css" />
+  <title>Weather App</title>
+</head>
+
+<body class="">
+  <header class="px-[20px] py-[15px] shadow-md fixed w-full z-50 bg-[#FFFFFF]">
+    <div class="flex justify-between items-center container mx-auto max-w-[1250px]">
+      <h1 class="text-[#535967] font-bold font-sans text-xl">WeatherApp</h1>
+      <button class="p-[15px]">
+        <img src="./assets/icons/moon.svg" alt="btn-moon" />
+      </button>
+    </div>
+  </header>
+
+  <main class="pt-[90px] relative">
+    <section class="mt-[40px]">
+      <div class="container mx-auto max-w-[1250px] px-[20px]">
+        <form class="form">
+          <div class="flex relative">
+            <img src="./assets/icons/search.svg" alt="search" class="absolute top-[25%] left-[20px]" />
+            <input type="text" placeholder="Search city..." aria-label="Search city by name"
+              class="search-input bg-[#F5F6F7] w-full py-[10px] px-[15px] pl-[60px] rounded-md outline-none" />
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="mt-[40px]">
+      <div class="container mx-auto max-w-[1250px] px-[20px] md:flex md:justify-center">
+        <!-- card  -->
+        <div class="block w-full bg-[#F5F6F7] shadow-md rounded-md p-[25px]  md:max-w-[500px]">
+          <h2 class="font-bold text-center">No Reasult here yet !</h2>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <template class="card-template">
+    <div class="">
+      <div class="flex items-center gap-[15px] md:justify-center">
+        <img src="./assets/icons/city-icon.svg" alt="" />
+        <h2 class="city-name text-2xl font-bold">London</h2>
+      </div>
+      <div class="flex justify-center mt-[25px]">
+        <div class="relative">
+          <p class="text-[25px] absolute right-[-25px] top-[15px] font-bold">
+            °C
+          </p>
+          <p class="weather-num text-[60px] font-bold">22</p>
+        </div>
+      </div>
+      <div class="flex items-center justify-between mt-[20px] md:justify-center md:gap-[20px]">
+        <div class="flex items-center gap-[15px]">
+          <div>
+            <img src="./assets/icons/rain-alt-svgrepo-com.svg" alt="" />
+          </div>
+          <div class="flex flex-col font-bold">
+            <p class="humidity">50%</p>
+            <p>humidity</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-[15px]">
+          <div>
+            <img src="./assets/icons/wind-svg-svgrepo-com.svg" alt="" />
+          </div>
+          <div class="flex flex-col font-bold">
+            <p class="wind-speed">50km/h</p>
+            <p>Speed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script src="./src/js/main.js"></script>
+</body>
+
+</html>
